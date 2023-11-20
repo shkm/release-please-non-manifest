@@ -24,4 +24,4 @@ jobs:
         with:
           command: manifest
           default-branch: "${{ github.ref_name }}"
-          prerelease: ${{ steps.pre-branch.outputs.match }}
+          prerelease: true
