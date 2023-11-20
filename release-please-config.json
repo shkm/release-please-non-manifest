@@ -3,6 +3,7 @@
   "bump-patch-for-minor-pre-major": true,
   "prerelease-type": "pre",
   "versioning-strategy": "prerelease",
+  "prerelease": true,
   "release-type": "ruby",
   "packages": {
     ".": {
