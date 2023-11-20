@@ -24,5 +24,4 @@ jobs:
         with:
           command: manifest
           default-branch: "${{ github.ref_name }}"
-          # versioning-strategy: "${{ steps.pre-branch.outputs.match && 'prerelease' || 'default' }}"
-          # prerelease: ${{ steps.pre-branch.outputs.match }}
+          prerelease: ${{ steps.pre-branch.outputs.match }}
