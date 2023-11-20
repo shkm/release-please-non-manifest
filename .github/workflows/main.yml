@@ -20,12 +20,9 @@ jobs:
           if [[ ${{ github.ref_name }} =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
               echo "match=true" >> $GITHUB_OUTPUT
           fi
-      - uses: google-github-actions/release-please-action@dependabot/npm_and_yarn/release-please-16.3.0
+      - uses: google-github-actions/release-please-action@v3
         with:
-          release-type: ruby
-          bump-minor-pre-major: true
-          bump-patch-for-minor-pre-major: true
-          prerelease-type: pre
+          command: manifest
           default-branch: "${{ github.ref_name }}"
-          versioning-strategy: "${{ steps.pre-branch.outputs.match && 'prerelease' || 'default' }}"
-          prerelease: ${{ steps.pre-branch.outputs.match }}
+          # versioning-strategy: "${{ steps.pre-branch.outputs.match && 'prerelease' || 'default' }}"
+          # prerelease: ${{ steps.pre-branch.outputs.match }}
