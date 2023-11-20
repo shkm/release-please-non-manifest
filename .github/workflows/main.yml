@@ -20,7 +20,7 @@ jobs:
           if [[ ${{ github.ref_name }} =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
               echo "match=true" >> $GITHUB_OUTPUT
           fi
-      - uses: google-github-actions/release-please-action@v3
+      - uses: google-github-actions/release-please-action@dependabot/npm_and_yarn/release-please-16.3.0
         with:
           release-type: ruby
           bump-minor-pre-major: true
